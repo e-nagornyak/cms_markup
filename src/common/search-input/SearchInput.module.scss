@@ -1,23 +1,51 @@
 .wrapper {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
+  position: relative;
 
-.info {
-  display: flex;
-  flex-direction: column;
-
-  .name {
-    font-size: 14px;
-    line-height: 21px;
+  &:before {
+    content: url("../../assept/images/search.svg");
+    position: absolute;
+    top: 7px;
+    left: 6px;
+    transition: all .3s ease-in-out;
   }
 
-  .position {
-    font-weight: 400;
+  &:hover {
+    &:before {
+      transform: rotate(45deg);
+    }
+  }
+
+  .input {
+    width: 216px;
+    height: 38px;
+    background: #F9FBFF;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 0 10px 40px;
     font-size: 12px;
     line-height: 18px;
-    color: #757575;
+
+
+    &::placeholder {
+      color: #B5B7C0;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &:focus-visible {
+      outline: 1px solid rgb(117 117 117 / 23%);
+    }
   }
+
 }
 
+@media screen and (max-width: 900px) {
+  .wrapper {
+    width: 100%;
+
+    .input {
+      width: 100%;
+    }
+  }
+
+}

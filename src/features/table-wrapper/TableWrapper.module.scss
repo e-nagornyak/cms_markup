@@ -1,0 +1,43 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+}
+
+.subtitle {
+  color: #16C098;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    justify-content: center;
+  }
+  .title_wrapper {
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}

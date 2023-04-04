@@ -1,0 +1,46 @@
+.nav {
+  background: #fff;
+  width: 306px;
+  box-shadow: 0 10px 60px rgba(226, 236, 249, 0.5);
+  padding: 36px 28px 78px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 60px;
+  height: 100vh;
+  transition: all 0.4s ease-in-out;
+}
+
+.logo_wrapper {
+  position: relative;
+
+  .version {
+    position: absolute;
+    top: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .nav {
+    position: absolute;
+    left: -280px;
+    transition: all 0.4s ease-in-out;
+    z-index: 2;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 7px;
+      height: 51px;
+      right: 0;
+      top: 47%;
+      background: #5932EA;
+      border-radius: 34px;
+      cursor: pointer;
+    }
+
+    &:hover {
+      left: 0
+    }
+  }
+}

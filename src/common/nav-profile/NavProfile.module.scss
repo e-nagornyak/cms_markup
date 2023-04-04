@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+
+  .name {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .position {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #757575;
+  }
+}
+

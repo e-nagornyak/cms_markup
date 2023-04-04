@@ -1,0 +1,80 @@
+.tableWithGrid {
+  display: grid;
+  border-collapse: collapse;
+  overflow: auto;
+  grid-template-columns:
+    minmax(180px, 1fr)
+    minmax(130px, .2fr)
+    minmax(150px, .3fr)
+    minmax(230px, .3fr)
+    minmax(180px, .2fr)
+    minmax(130px, .2fr);
+
+  thead,
+  tbody,
+  tr {
+    display: contents;
+  }
+
+  th,
+  td {
+    display: flex;
+    padding: 9px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-collapse: collapse;
+    border-bottom: 1px solid #EEEEEE;
+    align-items: center;
+  }
+
+  th {
+    position: sticky;
+    top: 0;
+    text-align: left;
+    color: #B5B7C0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .tableWithGrid {
+    grid-template-columns: 1fr;
+
+    & td {
+      border-bottom: 1px solid rgba(85, 95, 98, 0.45);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .8em;
+      text-align: right;
+    }
+
+    & tr {
+      border-bottom: 2px solid rgba(85, 95, 98, 0.45);
+      display: block;
+      margin-bottom: .625em;
+    }
+
+    thead {
+      display: none;
+      visibility: hidden;
+    }
+
+    & td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}

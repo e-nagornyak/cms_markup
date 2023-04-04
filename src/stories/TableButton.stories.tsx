@@ -1,21 +1,17 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import icon from 'assept/images/nav-list/discount.svg'
-import { NavItem } from 'common/nav-item/NavItem'
-import { TablePagination } from 'common/table-pagination/TablePagination'
+import { TableButton } from 'common/table-btn/TableButton'
 
 export default {
-  title: 'Example/NavItem',
-  component: NavItem,
+  title: 'Example/TableButton',
+  component: TableButton,
   parameters: {
     layout: 'fullscreen'
   }
-} as ComponentMeta<typeof NavItem>
+} as ComponentMeta<typeof TableButton>
 
-const Template: ComponentStory<typeof TablePagination> = args => <NavItem icon={icon} title="Example" isActive {...args} />
-const Template2: ComponentStory<typeof TablePagination> = args => (
-  <NavItem icon={icon} title="Example" isActive={false} {...args} />
-)
+const Template: ComponentStory<typeof TableButton> = args => <TableButton title="active" />
+const Template2: ComponentStory<typeof TableButton> = args => <TableButton title="Inactive" />
 
-export const ActiveNavItem = Template.bind({})
-export const DefaultNavItem = Template2.bind({})
+export const ActiveButton = Template.bind({})
+export const InactiveButton = Template2.bind({})

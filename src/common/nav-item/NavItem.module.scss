@@ -1,0 +1,44 @@
+.wrapper {
+  width: 250px;
+  height: 46px;
+  border-radius: 8px;
+  padding: 13px 0 13px 13px;
+  font-size: 14px;
+  line-height: 21px;
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-column-gap: 13px;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  color: #9197B3;
+
+  &:hover {
+    background: #5932EA;
+    color: #fff;
+
+    .icon {
+      filter: brightness(10);
+    }
+  }
+}
+
+.active {
+  background: #5932EA;
+  color: #fff;
+}
+
+.title {
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 21.5px;
+  height: 21.5px;
+  cursor: pointer;
+}
+
+.arrow {
+  cursor: pointer;
+}
