@@ -1,0 +1,19 @@
+.nav {
+  background: #fff;
+  width: 20%;
+  box-shadow: 0 10px 60px rgba(226, 236, 249, 0.5);
+  padding: 36px 28px 78px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.logo_wrapper {
+  position: relative;
+
+  .version {
+    position: absolute;
+    top: 20px;
+  }
+}
