@@ -23,6 +23,14 @@
   border-radius: 30px;
   padding: 30px 40px 40px 38px;
 }
+@media screen and (max-width: 1367px) {
+  .container {
+    gap: 10px;
+  }
+  .mainBlock {
+    min-height: 100%;
+  }
+}
 
 @media screen and (max-width: 900px) {
   .container {
