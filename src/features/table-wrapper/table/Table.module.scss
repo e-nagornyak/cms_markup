@@ -47,6 +47,13 @@
   }
 }
 
+.empty_img {
+  width: 25vw;
+  height: 40vh;
+  display: flex;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 900px) {
   .tableWithGrid {
     grid-template-columns: 1fr;
@@ -77,4 +84,8 @@
       text-transform: uppercase;
     }
   }
+  .empty_img {
+    display: none;
+  }
 }
+
